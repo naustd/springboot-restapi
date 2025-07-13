@@ -59,6 +59,13 @@ spring.jpa.properties.hibernate.format_sql=true
 | PUT    | `/api/students/{id}` | Update existing record  |
 | DELETE | `/api/{id}` | Delete by ID            |
 
+🧪 API Testing with Swagger
+Swagger UI is enabled at:
+
+
+http://localhost:8080/swagger-ui/index.html <br/>
+Use this to test all endpoints directly from the browser.
+
 ## Initialize Git in project
 git init
 ## Add remote GitHub repository
@@ -78,4 +85,10 @@ git push -u origin main
 ✅ Integration with PostgreSQL <br/>
 ✅ Exception handling <br/>
 ✅ Clean code with Lombok <br/>
+✅ Swagger UI for testing <br />
 ✅ Git integration for version control <br/>
+
+
+![img.png](img.png)
+
+![img_1.png](img_1.png)
