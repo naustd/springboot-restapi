@@ -31,6 +31,4 @@ public class StudentData {
     private String jobTitle;
     @Column(precision = 10,scale = 2, nullable = false)
     private BigDecimal salary;
-
-
 }

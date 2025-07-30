@@ -6,6 +6,7 @@ import com.restapi.springboot.prac.rest_api_prac.entity.StudentData;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.math.BigDecimal;
 import java.util.List;
 import java.util.Optional;
 
@@ -65,13 +66,27 @@ public class StudentServiceImpl implements StudentDataService {
         Optional<StudentData> optionalStudentData = studentDataRepository.findById(id);
         if(optionalStudentData.isPresent()){
             StudentData existing = optionalStudentData.get();
-            existing.setEmail(student.getEmail());
-            existing.setSalary(student.getSalary());
-            existing.setJobTitle(student.getJobTitle());
-            existing.setHireDate(student.getHireDate());
-            existing.setFirstName(student.getFirstName());
-            existing.setLastName(student.getLastName());
-            existing.setMobileNumber(student.getMobileNumber());
+            if(student.getEmail() != null){
+                existing.setEmail(student.getEmail());
+            }
+            if(student.getSalary() != null) {
+                existing.setSalary(student.getSalary());
+            }
+            if(student.getJobTitle() != null){
+                existing.setJobTitle(student.getJobTitle());
+            }
+            if(student.getHireDate() != null) {
+                existing.setHireDate(student.getHireDate());
+            }
+            if(student.getFirstName() !=null) {
+                existing.setFirstName(student.getFirstName());
+            }
+            if(student.getLastName() != null){
+                existing.setLastName(student.getLastName());
+            }
+            if(student.getMobileNumber() != null){
+                existing.setMobileNumber(student.getMobileNumber());
+            }
             return studentDataRepository.save(existing);
         }
         else {
